@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation</title>
+    <style>
+        @keyframes sliding {
+            0%{
+                background-color: gold;
+                left: 0;
+                top: 0;
+            }
+            20%{
+                background-color: hotpink;
+                left: 220px;
+                top: 90%;
+                transform: scale(.5);
+            }
+            40%{
+                background-color: lawngreen;
+                left: 440px;
+                top: 0;
+                transform: scale(1);
+            }
+            60%{
+                background-color: red;
+                left: 680px;
+                top: 90%;
+                transform: scale(.5);
+            }
+            80%{
+                background-color: rgb(221, 218, 228);
+                left: 900px;
+                top: 0;
+                transform: scale(1);
+            }
+            100%{
+                background-color: green;
+                left: 1150px;
+                top: 90%;
+            }
+        }
+        .field{
+            height: 93vh;
+            width: 100%;
+            background-color: indigo;
+            border: 10px solid blanchedalmond;
+        }
+        .ball{
+            height: 100px;
+            width: 100px;
+            border-radius: 50px;
+            position: relative;
+            animation: sliding 5s linear infinite alternate;
+            animation-play-state: running;
+            animation: name duration timing-function delay iteration-count direction fill-mode;
+        }
+    </style>
+</head>
+<body>
+    <div class="field">
+        <div class="ball"></div>
+    </div>
+</body>
+</html>
